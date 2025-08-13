@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Directorio.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,18 @@ namespace Directorio
     {
         static void Main(string[] args)
         {
+            Persona persona = new Persona();
+
+            persona.setNombres("Lesly");
+            
+            Console.WriteLine(persona.getNombres());
+
+            Console.ReadLine();
+
+           
+
+
+        
         }
     }
 }
