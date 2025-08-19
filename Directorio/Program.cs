@@ -17,6 +17,9 @@ namespace Directorio
             
             Console.WriteLine(persona.getNombres());
 
+            Marcador marcador = new Marcador();
+            Console.WriteLine(marcador.getsalario(8));
+
             Console.ReadLine();
 
            
