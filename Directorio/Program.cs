@@ -9,11 +9,23 @@ namespace Directorio
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[ ] args)
         {
             Persona persona = new Persona();
+            string nombrecompleto = string.Empty;
 
-            persona.setNombres("Lesly");
+            persona.setNombres("Veronica");
+            persona.setApellidos("Antunez");
+
+            nombrecompleto = persona.getNombreCompleto();
+
+            Console.WriteLine("persona 1" + nombrecompleto);
+
+            nombrecompleto = persona.getNombreCompleto("Lesly Maria Antunez Oliva");
+
+            Console.WriteLine("persona 2" + nombrecompleto);
+
+            Console.ReadLine();
             
             Console.WriteLine(persona.getNombres());
 
