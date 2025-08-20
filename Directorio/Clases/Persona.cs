@@ -9,9 +9,10 @@ namespace Directorio.Clases
 {
     public class Persona
     {
+        private string numeroid { get; set; }
         private string nombres { set; get; }
 
-        public string apellidos { set; get; }
+        private string apellidos { set; get; }
 
         public string direccion { set; get; }
         public int edad { set; get; }
@@ -34,33 +35,33 @@ namespace Directorio.Clases
         {
             return this.nombres;
         }
-        public void setNombreCompleto(string p_nombres)
+        public void setNombres( string p_nombres)
         {
             this.nombres = p_nombres;
+        }
+        public string getApellidos()
+        {
+            return this.apellidos;
         }
         public void setApellidos(string p_apellidos)
         {
             this.apellidos = p_apellidos;
-        } 
-
-        public string getNombreCompleto(string v)
-        {
-            return this.nombres + " " + this.apellidos;
-
         }
-        public string setNombreCompleto(string nombre, string apellidos)
+        public string getNombreCompleto()
         {
             return this.nombres + " " + this.apellidos;
         }
-
-        internal string getNombreCompleto()
+        public string getNombreCompleto(string p_nombres, string p_apellidos)
         {
-            throw new NotImplementedException();
-        }
+            this.nombres = p_nombres;
+            this.apellidos = p_apellidos;
 
-        internal void setNombres(string v)
-        {
-            throw new NotImplementedException();
+            return this.nombres + " " + this.apellidos;
+
         }
+     
+       
+       
+        
     }
 }

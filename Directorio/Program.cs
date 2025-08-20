@@ -9,34 +9,31 @@ namespace Directorio
 {
     internal class Program
     {
-        static void Main(string[ ] args)
+        static void Main(string[] args)
         {
-            Persona persona = new Persona();
-            string nombrecompleto = string.Empty;
-
-            persona.setNombres("Veronica");
-            persona.setApellidos("Antunez");
-
-            nombrecompleto = persona.getNombreCompleto();
-
-            Console.WriteLine("persona 1" + nombrecompleto);
-
-            nombrecompleto = persona.getNombreCompleto("Lesly Maria Antunez Oliva");
-
-            Console.WriteLine("persona 2" + nombrecompleto);
-
-            Console.ReadLine();
-            
-            Console.WriteLine(persona.getNombres());
-
-            Marcador marcador = new Marcador();
-            Console.WriteLine(marcador.getsalario(8));
-
-            Console.ReadLine();
-
-           
+            ejemploclasspersona();
 
 
+        void ejemploclasspersona()
+            {
+                Persona persona = new Persona();
+                string nombrecompleto = string.Empty;
+                Marcador marcador = new Marcador();
+
+                persona.setNombres(" Rosa ");
+                persona.setApellidos("Montero ");
+
+                nombrecompleto = persona.getNombreCompleto();
+
+                Console.WriteLine(" persona 1 " + nombrecompleto + " salario: " + marcador.getSalario(44 * 4));
+
+                nombrecompleto = persona.getNombreCompleto(" Luis fernando ","Torres ");
+
+                Console.WriteLine(" persona 2 " + nombrecompleto + " salario: " + marcador.getSalario(35 * 4));
+
+                Console.ReadLine();
+            }
+        
         
         }
     }

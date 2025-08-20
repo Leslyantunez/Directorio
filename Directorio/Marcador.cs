@@ -19,12 +19,13 @@ namespace Directorio
             this.costoHora = 50;
 
         }
-        public double getsalario(double p_horasTrabajadas)
+        public double getSalario(double p_horasTrabajadas)
         {
             this.horasTrabajadas = p_horasTrabajadas;
             this.salario = this.horasTrabajadas * this.costoHora;
 
             return this.salario;
+
         }
     }
 }
